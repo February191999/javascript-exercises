@@ -1,4 +1,13 @@
-const sumAll = function() {
+const sumAll = function(firstNumber, secondNumber) {
+    let addedSum = 0;
+    let i = firstNumber;
+
+    while (i <= secondNumber) {
+        addedSum += i;
+        i++
+    }
+
+    return addedSum;
 
 };
 
