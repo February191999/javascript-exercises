@@ -2,7 +2,9 @@ const sumAll = function(firstNumber, secondNumber) {
     let addedSum = 0;
     let i = firstNumber;
 
-    if (firstNumber < secondNumber) {
+    if (firstNumber < 0) {
+        return "ERROR"
+    } else if (firstNumber < secondNumber) {
         while (i <= secondNumber) {
             addedSum += i;
             i++
@@ -12,7 +14,7 @@ const sumAll = function(firstNumber, secondNumber) {
             addedSum += i;
             i--;
         }
-    }
+    } 
 
     return addedSum;
 
