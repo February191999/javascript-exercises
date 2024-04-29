@@ -32,10 +32,12 @@ const factorial = function(num) {
   for (let i = num; i > 0; i--) {
     numArray.push(i);
   }
-  
-  return numArray.reduce((total, num) => {
-    return (num -1) * total; 
-  }, 1);
+
+  let factoredNum = numArray.reduce((total, currentNum) => {
+    return total * currentNum; 
+  }, 1)
+
+  return factoredNum;
 };
 
 // Do not edit below this line
