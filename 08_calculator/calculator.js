@@ -23,8 +23,18 @@ const power = function(a, b) {
   return a ** b;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+  let numArray = [];
+  if (num === 0) {
+    return 1;
+  }
+
+  for (let i = num; i > 0; i--) {
+    numArray.push(i);
+  }
+  
+
+  return numArray;
 };
 
 // Do not edit below this line
