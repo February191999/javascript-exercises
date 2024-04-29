@@ -13,8 +13,10 @@ const sum = function(array) {
 
 };
 
-const multiply = function() {
-
+const multiply = function(array) {
+  return array.reduce((total, currentNum) => {
+    return total * currentNum;
+  });
 };
 
 const power = function() {
