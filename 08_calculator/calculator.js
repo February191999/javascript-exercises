@@ -25,7 +25,7 @@ const power = function(a, b) {
 
 const factorial = function(num) {
   let numArray = [];
-  if (num === 0) {
+  if (num === 0 || num === 1) {
     return 1;
   }
 
@@ -33,8 +33,9 @@ const factorial = function(num) {
     numArray.push(i);
   }
   
-
-  return numArray;
+  return numArray.reduce((total, num) => {
+    return (num -1) * total; 
+  }, 1);
 };
 
 // Do not edit below this line
