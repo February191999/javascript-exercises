@@ -22,7 +22,9 @@ const palindromes = function (string) {
         .map(char => char.toLowerCase())
         .join("");
 
-    if (stringToTest === reversedStringToTest) {
+    if (stringToTest !== reversedStringToTest) {
+        return false;
+    } else {
         return true;
     }
 };
