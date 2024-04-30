@@ -7,6 +7,8 @@ const fibonacci = function(num) {
         return 0;
     } else if (num === 1 || num === 2) {
         return 1;
+    } else if (num < 0) {
+        return "OOPS";
     }
 
     for (let i = 1; i < checkDifference + 2; i ++) {
