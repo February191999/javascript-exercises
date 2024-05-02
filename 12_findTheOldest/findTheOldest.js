@@ -2,15 +2,18 @@ const findTheOldest = function(people) {
     
 
     return people.reduce((previousPerson, currentPerson) => {
-        let currentAge = person.yearOfDeath-person.yearOfDeathBirth;
 
-        if (currentAge > previousAge) {
-            return 1;
+        let previousPersonAge = getAge(previousPerson.yearOfBirth, previousPerson.yearOfDeath);
+
+        let currentPersonAge = getAge(currentPerson.yearOfBirth, currentPerson.yearOfDeath);
+
+        if (previousPersonAge > currentPersonAge) {
+            return previousPerson;
         } else {
-            return -1;
+            return currentPerson;
         }
 
-    }, {});
+    });
 };
 
 function getAge(birthYear, deathYear) {
